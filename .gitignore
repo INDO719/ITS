@@ -1,3 +1,61 @@
-.idea
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
 
-.gitignore
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- uv (если используешь uv) ---
+# uv.lock — НЕ игнорируем, его нужно коммитить!
+.uv/
+
+# --- Тестирование / покрытие ---
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+coverage.xml
+*.cover
+
+# --- Типизация / линтеры ---
+.mypy_cache/
+.dmypy.json
+.ruff_cache/
+.pytype/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+
+# --- Переменные окружения ---
+.env
+.env.*
+!.env.example
+
+# --- IDE / редакторы ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# --- ОС ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Логи и временные файлы ---
+*.log
+*.tmp
+.cache/
