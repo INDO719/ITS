@@ -50,19 +50,17 @@ def draw(board):
 def play_game(board_size, player1, player2):
     board = make_board(board_size)
     print(format_board(board))
-
+    players = (player1, player2)
+    s = 0
     while True:
-        play_move(board, player1)
+        play_move(board, players[s % 2])
         if winner(board):
-            print_winner(player1)
+            print_winner(players[s % 2])
             break
         if draw(board):
             print_draw()
             break
-        play_move(board, player2)
-        if winner(board):
-            print_winner(player2)
-            break
+        s += 1
 
 
 def main():
