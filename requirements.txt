@@ -10,3 +10,5 @@ numpy>=1.24.0
 
 # Для логирования и визуализации (встроено в torch.utils.tensorboard)
 tensorboard>=2.16.0
+
+deep-translator>=1.11.4
