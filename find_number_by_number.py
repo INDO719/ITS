@@ -40,3 +40,10 @@ def solution(n:int) -> int:
     result = {x[i]: y[i] for i in range(len(x))}
 
     return result[n]
+
+def main():
+    n = 12
+    print(solution(n))
+
+if __name__ == "__main__":
+    main()
