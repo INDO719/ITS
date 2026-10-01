@@ -3,7 +3,7 @@ from deep_translator import GoogleTranslator
 
 
 class PathWork:
-    def __init__(self, start_point='C:\\Users\\Kilin_Ivan\\'):
+    def __init__(self, start_point='C:\\Users\\'):
         self.start_point = start_point
         self.list_of_path = [self.start_point]
         self.list_of_types = ['.txt', '.docx', '.doc', '.rtf', '.odt', '.jpg', '.jpeg', '.png', '.gif', '.bmp', '.tiff', '.tif', '.svg', '.mp3', '.wav', '.aac', '.flac', 'mp4', '.avi', '.mvk', '.mov', '.exe', '.bat', '.sh', '.zip', '.rar', '.7z', '.pdf', '.html', '.htm', '.csv', '.xml', '.json', '.torrent', '']
