@@ -16,3 +16,7 @@ deep-translator>=1.11.4
 speech_recognition
 
 pyttsx3
+
+navec
+
+tqdm
