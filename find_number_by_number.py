@@ -42,7 +42,7 @@ def solution(n:int) -> int:
     return result[n]
 
 def main():
-    n = 12
+    n = 12312413513
     print(solution(n))
 
 if __name__ == "__main__":
