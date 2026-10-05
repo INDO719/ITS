@@ -61,3 +61,5 @@ class PathWork:
                 if os.path.exists(path):
                     os.remove(path)
                     print("Файл удален")
+    def close(self, name, type):
+        pass
