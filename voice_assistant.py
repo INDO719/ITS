@@ -180,7 +180,8 @@ def main():
     window = Window('Voice Assistant', 400, 300)
     window.setup()
     window.window.mainloop()
-    window.loop.call_soon_threadsafe(window.loop.stop)  # Корректное завершение
+    window.loop.call_soon_threadsafe(window.loop.stop)
+    print("Приложение запущено")# Корректное завершение
 
 if __name__ == '__main__':
     main()
