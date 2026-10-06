@@ -18,8 +18,11 @@ class PathWork:
                 if type in file:
                     type_of_file = type
                     file_without_t = file.replace(type_of_file, '')
-
-                    translate_file = self.translator.translate(file_without_t)
+                    translate_file = ""
+                    try:
+                        translate_file = self.translator.translate(file_without_t)
+                    except:
+                        print("Не удалось перевести")
 
                     if file_without_t.lower() == path or translate_file.lower() == path:
                         self.list_of_path.append(os.path.join(self.list_of_path[-1], file_without_t+type_of_file))
@@ -64,3 +67,7 @@ class PathWork:
     def close(self, name, type, status):
         if not status:
             print(f"{name} закрыт")
+            return 0
+        print("f{name} Файл закрывается")
+
+
