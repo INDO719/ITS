@@ -62,4 +62,5 @@ class PathWork:
                     os.remove(path)
                     print("Файл удален")
     def close(self, name, type, status):
-        pass
+        if not status:
+            print(f"{name} закрыт")
