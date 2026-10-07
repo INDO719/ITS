@@ -17,8 +17,18 @@ def amount(items, needle):
     pass
 
 def main():
-    """Будущий холодильник"""
-    pass
+    goods = {
+        "Пельмени Универсальные": [
+            {"amount": Decimal("0.5"),
+             "expiration_date": datetime.date(2023, 7, 15)},
+            {"amount": Decimal("2"),
+             "expiration_date": datetime.date(2023, 8, 1)}
+        ],
+        "Вода": [
+            {"amount": Decimal("1.5"),
+             "expiration_date": None}
+        ]
+    }
 
 if __name__ == '__main__':
     main()
