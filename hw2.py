@@ -170,7 +170,9 @@ def from_numeral_to_roman_converter(number: int) -> str:
 print(from_roman_to_numeral_converter("MMMXXXL"))
 print(from_numeral_to_roman_converter(3080))
 """
+from idlelib.configdialog import changes
 
+from anyio import get_available_backends
 
 #   Задача #6 – виселица
 
@@ -194,5 +196,26 @@ attempts = [
     [(4, 3), (4, 5), "/", chr(92), 2],
     [(5, 3), (5, 5), "/", chr(92), 2]
 ]
+
+def change_gallows(att: int, gal: list[list[str]]):
+    att -= 1
+
+    attempt = attempts[att]
+    quantity = attempt.pop()
+
+    if quantity == 1:
+        for coords in attempt[:-1]:
+            gal[coords[0]][coords[1]] = attempt[-1]
+
+    if quantity == 2:
+        coord1 = attempt[0]
+        coord2 = attempt[1]
+        gal[coord1[0]][coord1[1]] = attempt[2]
+        gal[coord2[0]][coord2[1]] = attempt[3]
+
+    return gal
+
+gal = [[" " for _ in range(9)] for _ in range(7)]
+
 
 
