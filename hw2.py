@@ -1,4 +1,4 @@
-#   Задача #1 – шифр Цезаря
+"""#   Задача #1 – шифр Цезаря
 
 import string
 from pprint import pprint
@@ -34,11 +34,9 @@ x = caesar_cipher(message, shift)
 print(f"{x} | {caesar_cipher(x, -shift)}")
 
 
-
 #   Задача #2 – олимпиада
 
 def check_winners(scores: list[int], student_score: int) -> None:
-
     winners = [scores.pop(scores.index(max(scores))) for _ in range(3)]
     print("Вы в тройке победителей!" if student_score in winners else "Вы не попали в тройку победителей.")
 
@@ -49,11 +47,9 @@ student_score = 20
 check_winners(scores, student_score)
 
 
-
 #   Задача #3 – пироженки и коробочки
 
 def print_pack_report(amount: int) -> None:
-
     for n in range(amount, 0, -1):
         pass
 
@@ -69,12 +65,11 @@ def print_pack_report(amount: int) -> None:
     else:
         print(f"{amount} - не заказываем!")
 
+
 print_pack_report(30)
 print_pack_report(6)
 print_pack_report(55)
 print_pack_report(13)
-
-
 
 #   Задача #4 – сложные пароли
 
@@ -82,9 +77,9 @@ import string
 import random
 from typing import Optional
 
+
 def generate_password(length: int, lowercase: bool,
                       uppercase: bool, special: bool, nums: bool) -> Optional[str | None]:
-
     if length == 0:
         print("Вы не указали длину")
         return
@@ -109,6 +104,7 @@ def generate_password(length: int, lowercase: bool,
 
     return password
 
+
 print("Сгенерируйте свой пароль")
 length_pass = int(input("Введите длину пароля: "))
 lower_pass = input("В пароле будет нижний регистр? (да/нет): ")
@@ -125,22 +121,19 @@ password = generate_password(length_pass, is_lower, is_upper, is_spec, is_nums)
 if password is not None:
     print(f"Ваш пароль: {password}")
 
-
-
 #   Задача #5 – римский конвертер
 
 alph_rn = {"IV": 4, "IX": 9, "XL": 40, "XC": 90, "CD": 400, "CM": 900,
-        "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
+           "I": 1, "V": 5, "X": 10, "L": 50, "C": 100, "D": 500, "M": 1000}
 
 alph_nr = {value: key for key, value in alph_rn.items()}
 
 
 def from_roman_to_numeral_converter(number: str) -> int:
-
     result = 0
 
     for sym in number[:]:
-        if sym in ("IV", "IX", "XL", "XC",  "CD", "CM"):
+        if sym in ("IV", "IX", "XL", "XC", "CD", "CM"):
             result += alph_rn[sym]
             number = number.replace(alph_rn[sym], "")
 
@@ -149,8 +142,8 @@ def from_roman_to_numeral_converter(number: str) -> int:
 
     return result
 
-def from_numeral_to_roman_converter(number: int) -> str:
 
+def from_numeral_to_roman_converter(number: int) -> str:
     if number > 3999:
         raise ValueError("Нельзя передавать числа большие 3999")
 
@@ -174,7 +167,23 @@ def from_numeral_to_roman_converter(number: int) -> str:
     return result[::-1]
 
 
+print(from_roman_to_numeral_converter("MMMXXXL"))
+print(from_numeral_to_roman_converter(3080))
+"""
 
 
-print(from_roman_to_numeral_converter("MMMCCCDXXXL"))
-print(from_numeral_to_roman_converter(3880))
+#   Задача #6 – виселица
+
+
+gallows = [
+    ["_", "_", "_", "_", "_", "_", "_", "_", "_"],
+    ["|", " ", " ", " ", "|", " ", " ", " ", "|"],
+    ["|", " ", " ", " ", "|", " ", " ", " ", "|"],
+    ["|", " ", " ", "(", " ", ")", " ", " ", "|"],
+    ["|", " ", " ", "/", "|", chr(92), " ", " ", "|"],
+    ["|", " ", " ", "/", " ", chr(92), " ", " ", "|"],
+    ["|", " ", " ", " ", " ", " ", " ", " ", "|"]
+]
+
+for i in gallows:
+    print("".join(i))
