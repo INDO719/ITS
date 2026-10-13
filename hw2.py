@@ -201,7 +201,7 @@ def game():
     """функция ргы с главным циклом"""
 
 def check():
-    pass
+    """функция проверки слова"""
 
 def change_gallows(att: int, gal: list[list[str]]):
     att -= 1
