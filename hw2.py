@@ -197,6 +197,9 @@ attempts = [
     [(5, 3), (5, 5), "/", chr(92), 2]
 ]
 
+def game():
+    pass
+
 def change_gallows(att: int, gal: list[list[str]]):
     att -= 1
 
