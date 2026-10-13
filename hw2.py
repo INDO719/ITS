@@ -198,7 +198,7 @@ attempts = [
 ]
 
 def game():
-    pass
+    """функция ргы с главным циклом"""
 
 def check():
     pass
