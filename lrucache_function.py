@@ -15,4 +15,4 @@ def lru_cache(limit):
         return wrapper
 
     return decorator
-
+"""Функция"""
