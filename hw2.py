@@ -33,7 +33,7 @@ shift = 17
 x = caesar_cipher(message, shift)
 print(f"{x} | {caesar_cipher(x, -shift)}")
 
-
+"""
 #   Задача #2 – олимпиада
 
 def check_winners(scores: list[int], student_score: int) -> None:
@@ -41,11 +41,11 @@ def check_winners(scores: list[int], student_score: int) -> None:
     print("Вы в тройке победителей!" if student_score in winners else "Вы не попали в тройку победителей.")
 
 
-scores = [20, 48, 52, 38, 36, 13, 7, 41, 34, 24, 5, 51, 9, 14, 28]
-student_score = 20
+scores = [15, 10, 9]
+student_score = 9
 
 check_winners(scores, student_score)
-
+"""
 
 #   Задача #3 – пироженки и коробочки
 
@@ -199,9 +199,11 @@ attempts = [
 
 def game():
     """функция ргы с главным циклом"""
+    print(2)
 
 def check():
     """функция проверки слова"""
+    print(1)
 
 def change_gallows(att: int, gal: list[list[str]]):
     att -= 1
