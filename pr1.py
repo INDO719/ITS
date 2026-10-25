@@ -1,30 +1,30 @@
 
 
 class Employee:
-    def __init__(self, id, name, base_money):
+    def __init__(self, id, name, base_money) -> None:
         self.id = id
         self.name = name
         self.base_money = base_money
 
-    def calculate_salaries(self):
+    def calculate_salaries(self) -> float:
         return self.base_money
 
 
 class Manager(Employee):
-    def __init__(self, id, name, base_money, bonus):
+    def __init__(self, id, name, base_money, bonus) -> None:
         super().__init__(id, name, base_money)
         self.bonus = bonus
 
-    def calculate_salaries(self):
+    def calculate_salaries(self) -> float:
         return self.base_money + self.bonus
 
 
 class Developer(Employee):
-    def __init__(self, id, name, base_money, project_sum):
+    def __init__(self, id, name, base_money, project_sum) -> None:
         super().__init__(id, name, base_money)
         self.project_sum = project_sum
 
-    def calculate_salaries(self):
+    def calculate_salaries(self) -> float:
         return self.base_money + self.project_sum * 10_000
 
 
