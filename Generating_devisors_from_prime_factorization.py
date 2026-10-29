@@ -64,4 +64,4 @@ def div(simple_numbers: list) -> list:
             result.add(i)
     return [1] + list(result)
 
-print(div(f(2**200)))
+print(sorted(div(f(2**200))))
