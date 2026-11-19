@@ -89,7 +89,7 @@ st = model.state_dict()
 torch.save(st, 'model_rnn_words.tar')
 
 model.eval()
-sentence = "У меня нет врагов"
+sentence = "У меня нет врагов, и ни укого их нет"
 predict = sentence.lower().split()
 total = 10
 
